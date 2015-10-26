@@ -18,13 +18,13 @@ class uwsgi(
     $config = undef,
 ) {
   case $::operatingsystem {
-    Fedora: {
+    'Fedora': {
       $package_name   = 'uwsgi'
       $service_name   = 'uwsgi'
       $run_user       = 'uwsgi'
       $app_config_dir = '/etc/uwsgi.d'
     }
-    Ubuntu: {
+    'Ubuntu': {
       $package_name   = 'uwsgi'
       $service_name   = 'uwsgi'
       $upstart_script = '/etc/init/uwsgi.conf'
